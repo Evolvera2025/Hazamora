@@ -1,24 +1,58 @@
+/* Variables de colores */
+:root {
+    --hazamora1: #263E3E;
+    --hazamora2: #13685A;
+    --hazamora3: #C2751A;
+    --hazamora4: #EB9410;
+}
+
 .navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 95%; 
     display: flex;
     justify-content: space-between;
+    align-items: center; 
+    background-color: var(--hazamora1); 
+    padding: 5px 5px; 
+    color: #EAE0C8; /* Color perla */
+    z-index: 1000; 
+    height: 50px; 
+}
+
+.logo {
+    display: flex;
     align-items: center;
-    background-color: #222;
-    padding: 10px 20px;
-    color: white;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem; 
     font-weight: bold;
-  }
-  
-  .links a {
+    color: var(--hazamora3); 
+}
+
+.logo-img {
+    height: 250px; 
+    margin-right: 5px; 
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.links a {
     margin-left: 20px;
-    color: white;
+    color: #EAE0C8; 
     text-decoration: none;
-  }
-  
-  .links a:hover {
+    font-size: 0.9rem; 
+}
+
+.links a:hover {
     text-decoration: underline;
-  }
-  
+    color: var(--hazamora2); 
+}
+
+body {
+    margin-top: 50px;
+    background-color: var(--hazamora1); 
+    color: var(--hazamora4); 
+}

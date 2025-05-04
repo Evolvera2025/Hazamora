@@ -4,7 +4,11 @@ import './Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">Hazamora</div>
+      <div className="logo">
+        <Link to="/">
+          <img src="img/LOGO HAZAMORA BLANCO-02.png" alt="Logo Hazamora" className="logo-img" />
+        </Link>
+      </div>
       <div className="links">
         <Link to="/">Inicio</Link>
         <Link to="/nosotras">Nosotras</Link>

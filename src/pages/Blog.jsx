@@ -7,5 +7,5 @@ function Blog() {
     );
   }
   
-  export default Blog; // ✅ Esta línea es obligatoria si usas import default
+  export default Blog; 
   
