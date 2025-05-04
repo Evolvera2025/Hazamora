@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: lightgray;
+  margin-bottom: 1000[x];
+}
+
+.nosotros-section {
+  padding-left: 40px;
+  background-color: #014d4d;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  position: relative;
+  padding-right: 0px;
+}
+
+.texto-nosotros {
+  max-width: 50%;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.texto-nosotros h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.texto-nosotros p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.resaltado {
+  font-weight: bold;
+  color: #EB9410;
+}
+
+.img-phone {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+  margin-right: 0%;
+}
+
+/* ANIMACIONES ICONOS */
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ESTILOS DE ICONOS */
+.icono {
+  position: absolute;
+  width: 60px;
+  animation: float 4s infinite;
+}
+
+.bombilla {
+  top: 50%;
+  right: 25%;
+}
+
+.estrella {
+  bottom: 10%;
+  left: 85%;
+  animation-delay: 1s;
+}
+
+.mensaje {
+  top: 20%;
+  left: 93%;
+  animation-delay: 2s;
+  width: 90px;
+}
+
+/* Activar animación al entrar al viewport (opcional JS) */
+.visible {
+  opacity: 1;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Estado inicial: oculto y desplazado hacia abajo */
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Estado visible: aparece con transición */
+.fade-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ####################################################### */
+/* RESPONSIVE DE LA PAGINA */
+/* En móviles, cambia la dirección a columna */
+@media (max-width: 1055px) {
+  .nosotros-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .texto-nosotros {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .img-phone {
+    width: 200px;
+    padding-left: 0px;
+  }
+
+  .icono {
+    display: none; 
+  }
+
+  .texto-nosotros h2 {
+    font-size: 2rem;
+  }
+
+  .texto-nosotros p {
+    font-size: 1rem;
+  }
+}
+
+/* ################# SECCION 2 MISION ##################### */
+
+.mision-section {
+  background-color: #dddddd;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.mision-contenido {
+  max-width: 700px;
+  color: #1d3f35;
+}
+
+.mision-icono {
+  width: 110px;
+  margin-bottom: 5px;
+}
+
+.mision-contenido h2 {
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.mision-contenido h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #1d3f35;
+  margin: 0.5rem auto;
+}
+
+.mision-contenido p {
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  padding: 0 1rem;
+}
+
+.mision-contenido strong em {
+  font-weight: bold;
+  font-style: italic;
+  color: #1d3f35;
+}
+
+@media (max-width: 600px) {
+  .mision-contenido h2 {
+    font-size: 2rem;
+  }
+
+  .mision-contenido p {
+    font-size: 1rem;
+  }
+}
+
+/* ################# SECCION 3 SERVICIOS ##################### */
+
+.servicios-section
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 4rem 2rem;
+  background-color: #fdfdf9;
+}
+
+.servicios-izquierda
+{
+  flex: 1 1 300px;
+  background-color: #014d4d;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* ## ICONO CON ANIMACIONES */
+.servicios-izquierda .icono-c
+{
+  width: 200px;
+  margin-bottom: 5px;
+  animation: latido 2s infinite ease-in-out;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+.servicios-izquierda h2
+{
+  font-size: 2rem;
+  margin-bottom: 1px;
+}
+
+.servicios-izquierda p
+{
+  margin-top: 0px;
+  font-size: 20px;
+}
+
+.boton-contacto
+{
+  background-color: white;
+  color: #1d3f35;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition: bacground 0.3s;
+}
+
+.boton-contacto:hover
+{
+  background-color: #e1e1e1;
+}
+
+.servicios-derecha
+{
+  flex: 2 1 400px;
+  padding: 2rem;
+  background-color: rgb(232, 231, 231);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.servicios
+{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.linea
+{
+  width: 30px;
+  height: 12px;
+  background-color: #0f5b4c;
+  margin-right: 1rem;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+.linea.gris
+{
+  background-color: #c3d0ca;
+}
+
+.servicios h3
+{
+  color: #0f5b4c;
+  margin: 0 0 0.5rem;
+}
+
+.servicios p
+{
+  margin: 0;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .servicios {
+    flex-direction: column;
+  }
+
+  .servicios-left, .servicios-right {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
