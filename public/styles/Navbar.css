@@ -48,11 +48,15 @@
 
 .links a:hover {
     text-decoration: underline;
-    color: var(--hazamora2); 
+    color: var(--hazamora4); 
 }
 
 body {
-    margin-top: 50px;
-    background-color: var(--hazamora1); 
-    color: var(--hazamora4); 
-}
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: var(--hazamora2);
+    margin-bottom: 1000px; 
+    position: relative;
+    z-index: 0; 
+  }

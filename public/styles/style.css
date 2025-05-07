@@ -5,19 +5,11 @@
   --hazamora4: #EB9410;
 }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: rgb(255, 255, 255);
-  background-color: var(--hazamora3);
-  margin-bottom: 1000px; /* Espacio para el footer */	
-  position: relative;
-  z-index: 0; 
-}
+
 
 .nosotros-section {
   padding-left: 40px;
-  background-color: #014d4d;
+  background-color: var(--hazamora2);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

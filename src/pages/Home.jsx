@@ -4,7 +4,7 @@ import '/public/js/index.js';
 
 const Home = () => {
   return (
-    <div>
+    <div class="home-body">
       <section className="nosotros-section fade-on-scroll">
         <div className="texto-nosotros" id="texto">
           <h2>
