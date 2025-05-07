@@ -1,7 +1,6 @@
 import React from 'react';
 import '/public/styles/style.css'; 
 import '/public/js/index.js'; 
-
 const Home = () => {
   return (
     <div>
@@ -16,8 +15,8 @@ const Home = () => {
           </p>
         </div>
         <div>
-          <img className="img-phone" src="/img/Telefono.png" alt="teléfono mostrando Instagram" />
-         
+          <img className="img-phone" src="imagenes/Telefono.png" alt="teléfono mostrando Instagram" />
+          {/* Íconos flotantes */}
           <img className="icono bombilla" src="/img/Bombilla1.png" alt="bombilla" />
           <img className="icono estrella" src="/img/estrella.png" alt="estrella" />
           <img className="icono mensaje" src="/img/mensaje.png" alt="mensaje" />
