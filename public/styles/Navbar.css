@@ -1,62 +1,76 @@
-/* Variables de colores */
 :root {
-    --hazamora1: #263E3E;
-    --hazamora2: #13685A;
-    --hazamora3: #C2751A;
-    --hazamora4: #EB9410;
-}
-
-.navbar {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 95%; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    background-color: transparent; 
-    padding: 5px 5px; 
-    color: #EAE0C8; 
-    z-index: 1000; 
-    height: 50px; 
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem; 
-    font-weight: bold;
-    color: var(--hazamora3); 
-}
-
-.logo-img {
-    height: 250px; 
-    margin-right: 5px; 
-}
-
-.links {
-    display: flex;
-    align-items: center;
-}
-
-.links a {
-    margin-left: 20px;
-    color: #EAE0C8; 
-    text-decoration: none;
-    font-size: 0.9rem; 
-}
-
-.links a:hover {
-    text-decoration: underline;
-    color: var(--hazamora4); 
+  --hazamora1: #263E3E;
+  --hazamora2: #13685A;
+  --hazamora3: #C2751A;
+  --hazamora4: #EB9410;
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: var(--hazamora2);
-    margin-bottom: 1000px; 
-    position: relative;
-    z-index: 0; 
-  }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px; /* aún más grande */
+  color: #ffffff;
+  background-color: var(--hazamora2);
+  margin-bottom: 1000px;
+  position: relative;
+  z-index: 0;
+  padding-top: 80px; /* mayor separación del navbar */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 25px 40px;
+  color: #EAE0C8;
+  z-index: 1000;
+  height: 80px;
+  backdrop-filter: blur(4px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--hazamora3);
+}
+
+.logo-img {
+  height: 300px;
+  margin-right: 10px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  margin-left: 35px;
+  color: #EAE0C8;
+  text-decoration: none;
+  font-size: 1.7rem; /* más grande */
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: var(--hazamora4);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  background-color: var(--hazamora2);
+  margin-bottom: 1000px;
+  position: relative;
+  z-index: 0;
+  padding-top: 60px; /* para que el navbar no cubra el contenido */
+}

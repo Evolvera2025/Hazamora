@@ -2,6 +2,9 @@ import React from 'react';
 import '/public/styles/style.css';
 import '/public/js/index.js';
 import '/public/styles/galeria.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebookF, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 const Home = () => {
   return (
@@ -230,6 +233,33 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-logo">
+            <img src="./img/LOGO HAZAMORA BLANCO-03.png" alt="Logo Hazamora" />
+          </div>
+
+          <div className="footer-social">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+            </a>
+            <a href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faWhatsapp} className="social-icon" />
+            </a>
+          </div>
+
+          <div className="footer-contacto">
+            <p>© 2025 Hazamora. Todos los derechos reservados.</p>
+            <p>Correo: contacto@hazamora.com</p>
+          </div>
+        </div>
+      </footer>
+
+
     </div>
   );
 };

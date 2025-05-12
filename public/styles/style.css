@@ -365,3 +365,76 @@
     padding: 2rem 1rem;
   }
 }
+
+.footer {
+  background-color: var(--hazamora1);
+  color: #EAE0C8;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Mayor separación entre logo, redes y contacto */
+}
+
+.footer-logo {
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  height: 300px;
+  transform: scale(1.5);
+  transform-origin: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  font-size: 1.6rem;
+}
+
+.footer-social a {
+  color: #EAE0C8;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon {
+  margin: 0 15px; /* Agrega espacio entre cada icono */
+  font-size: 24px; /* Puedes ajustar el tamaño de los iconos si lo deseas */
+}
+
+.footer-social a:hover {
+  color: var(--hazamora4);
+  transform: scale(1.2);
+}
+
+.footer-contacto p {
+  margin: 2px 0;
+  font-size: 1rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 600px) {
+  .footer-social {
+    font-size: 1.4rem;
+  }
+
+  .footer-logo {
+    height: 90px;
+  }
+
+  .footer-logo img {
+    height: 80px;
+    transform: scale(1.3);
+  }
+}
+
+
+
