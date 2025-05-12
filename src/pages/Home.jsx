@@ -1,6 +1,7 @@
 import React from 'react';
-import '/public/styles/style.css'; 
-import '/public/js/index.js'; 
+import '/public/styles/style.css';
+import '/public/js/index.js';
+import '/public/styles/galeria.css';
 
 const Home = () => {
   return (
@@ -21,6 +22,8 @@ const Home = () => {
           <img className="icono bombilla" src="/img/Bombilla1.png" alt="bombilla" />
           <img className="icono estrella" src="/img/estrella.png" alt="estrella" />
           <img className="icono mensaje" src="/img/mensaje.png" alt="mensaje" />
+          <img className="icono admiracion" src="/img/admiracion.png" alt="admiracion" />
+          <img className="icono onomatopella" src="/img/onomatopella.png" alt="Onomatopella" />
         </div>
       </section>
 
@@ -37,6 +40,151 @@ const Home = () => {
           </p>
         </div>
       </section>
+
+
+      <div className="cuerpo">
+
+
+        <section className="images">
+
+          <div className="image active" style={{ backgroundImage: "url('/img/arania.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="image active" style={{ backgroundImage: "url('/img/buo.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="image active" style={{ backgroundImage: "url('/img/elefante.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="image active" style={{ backgroundImage: "url('/img/gato.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="image active" style={{ backgroundImage: "url('/img/tigre.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="image active" style={{ backgroundImage: "url('/img/cafe.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="image active" style={{ backgroundImage: "url('/img/concierto.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="image active" style={{ backgroundImage: "url('/img/aurora.jpg')" }} >
+            <div className="etiqueta">
+
+              <div className="iconos-gal">
+
+
+              </div>
+
+              <div className="info">
+                <p className="main">@Hazamora.com</p>
+                <p className="sub">Camara Nikon s200</p>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+        </section>
+      </div>
 
       <section className="servicios-section">
         <div className="servicios-izquierda">

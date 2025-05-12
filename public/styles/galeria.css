@@ -1,0 +1,188 @@
+:root {
+  --dark: #333;
+  --ligth: #fff;
+}
+
+.cuerpo 
+{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s;
+  background-color: #014d4d;
+}
+
+.cuerpo .images 
+{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  min-width: 950px;
+  max-width: 1150px;
+  width: calc(100% - 90);
+  height: 400px;
+}
+
+.cuerpo .images .image 
+{
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;
+  margin: 10px;
+  background-size: auto 100%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.1,0.1,0.1,0.1);
+}
+
+body .images .image.active
+{
+  flex-grow: 10000;
+  transform: scale(1);
+  max-width: 600px;
+  margin: 0;
+  border-radius: 25px;
+  background-size: auto 100%;
+}
+
+body .images .image.active .etiqueta
+{
+  align-items:center;
+  background: var(--dark);
+  padding: 10px;
+  border-radius: 50px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+}
+
+.cuerpo .images .image:not(.active)
+{
+  flex-grow: 1;
+  border-radius: 25px;
+}
+
+.cuerpo .images .image:not(.active) .etiqueta
+{
+  bottom: 10px;
+  left: 10px;
+}
+
+.cuerpo .images .image:not(.active) .etiqueta .info
+{
+  display: none;
+}
+
+.cuerpo .images .image .etiqueta
+{
+  display: flex;
+  position: absolute;
+  vertical-align: middle;
+}
+
+.cuerpo .images .image .etiqueta .iconos-gal
+{
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--ligth);
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--dark);
+}
+
+.cuerpo .images .image .etiqueta .info
+{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: var(--ligth);
+  line-height: 0;
+}
+
+.cuerpo .images .image .etiqueta .info .main
+{
+  font-weight: bold;
+  font-weight: 1.2rem;
+  
+}
+
+@media screen and (max-width: 718px) {
+  .cuerpo .images {
+    min-width: 620px;
+  }
+  .cuerpo .images .image:nth-child(8) {
+    display: none;
+  }
+
+  .cuerpo .images .image:nth-child(7) {
+    display: none;
+  }
+
+  .cuerpo .images .image:nth-child(6) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 818px) {
+  .cuerpo .images {
+    min-width: 640px;
+  }
+  .cuerpo .images .image:nth-child(8) {
+    display: none;
+  }
+
+  .cuerpo .images .image:nth-child(7) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 918px) {
+  .cuerpo .images {
+    min-width: 645px;
+  }
+  .cuerpo .images .image:nth-child(8) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .cuerpo .images {
+    min-width: 520px;
+  }
+  .cuerpo .images .image:nth-child(5) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cuerpo .images {
+    min-width: 410px;
+  }
+  .cuerpo .images .image:nth-child(4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cuerpo .images {
+    min-width: 350px;
+  }
+  .cuerpo .images .image:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .cuerpo .images {
+    min-width: 280px;
+  }
+  .cuerpo .images .image:nth-child(2) {
+    display: none;
+  }
+}
