@@ -1,20 +1,26 @@
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import '/public/styles/Navbar.css'
 
 function Navbar() {
+  const location = useLocation();
+
+  // Obtén el hash actual (ejemplo: #mision)
+  const currentHash = location.hash;
+
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">
+        <a href="#inicio">
           <img src="img/LOGO HAZAMORA BLANCO-02.png" alt="Logo Hazamora" className="logo-img" />
-        </Link>
+        </a>
       </div>
       <div className="links">
-        <Link to="/">Inicio</Link>
-        <Link to="/nosotras">Nosotras</Link>
-        <Link to="/servicios">Servicios</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/contacto">Contacto</Link>
+        <a href="#inicio" className={currentHash === '#inicio' || currentHash === '' ? 'active' : ''}>Inicio</a>
+        <a href="#nosotras" className={currentHash === '#nosotras' ? 'active' : ''}>Nosotras</a>
+        <a href="#mision" className={currentHash === '#mision' ? 'active' : ''}>Misión</a>
+        <a href="#servicios" className={currentHash === '#servicios' ? 'active' : ''}>Servicios</a>
+        <a href="#blog" className={currentHash === '#blog' ? 'active' : ''}>Blog</a>
+        <a href="#contacto" className={currentHash === '#contacto' ? 'active' : ''}>Contacto</a>
       </div>
     </nav>
   );

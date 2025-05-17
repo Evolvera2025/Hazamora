@@ -64,6 +64,12 @@ body {
   color: var(--hazamora4);
 }
 
+.links a.active {
+  color: var(--hazamora4); /* O el color que prefieras */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;

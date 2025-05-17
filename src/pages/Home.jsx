@@ -25,7 +25,7 @@ const Home = () => {
 ];
   return (
     <div class="home-body">
-      <section className="nosotros-section fade-on-scroll">
+      <section className="nosotros-section fade-on-scroll" id="inicio">
         <div className="texto-nosotros" id="texto">
           <h2>
             Somos una agencia de <span className="resaltado">Marketing Digital y Diseño</span>
@@ -46,7 +46,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mision-section fade-on-scroll">
+      <section className="mision-section fade-on-scroll" id="mision">
         <div className="mision-flex">
           <div className="mision-contenido" id="texto2">
             <img src="/img/sol.png" alt="Icono Misión" className="mision-icono" />
@@ -71,7 +71,7 @@ const Home = () => {
           ))}
         </h2>
 
-        <section className="images">
+        <section className="images" id="nosotras">
 
                   {imagenes.map((img, index) => (
               <div
@@ -100,7 +100,7 @@ const Home = () => {
         </h2>
       </div>
 
-      <section className="servicios-section">
+      <section className="servicios-section" id='servicios'>
         <div className="servicios-izquierda">
           <img src="/img/megafono.png" alt="Megafono img" className="icono-c" />
           <h2>
@@ -145,7 +145,7 @@ const Home = () => {
         </div>
       </section>
 
-          <section class="blog-section">
+          <section class="blog-section" id="blog">
 
             <div class="blog-left">
               <img ClassName="icono estrella" src="img/estrella.png" alt="sparkles decorativos" />
