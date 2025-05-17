@@ -32,17 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const image = document.querySelectorAll('.image');
+document.addEventListener('DOMContentLoaded', () => {
+  const image = document.querySelectorAll('.image');
 
-  for(let [, imageSelected] of image.entries())
-  {
-    imageSelected.addEventListener('click', function focus(){
+  image.forEach(imageSelected => {
+    imageSelected.addEventListener('click', () => {
       resetFocus();
-      imageSelected.classList.toggle('.active')
-    })
-  }
+      imageSelected.classList.add('active');
+    });
+  });
 
-  function resetFocus()
-  {
-    image.forEach(i => i.classList.remove('.active'))
+  function resetFocus() {
+    image.forEach(i => i.classList.remove('active'));
   }
+});

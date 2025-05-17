@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '/public/styles/style.css';
 import '/public/js/index.js';
 import '/public/styles/galeria.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebookF, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebookF, faWhatsapp, fa500px} from '@fortawesome/free-brands-svg-icons';
+
+
+
 
 
 const Home = () => {
+
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const imagenes = [
+      'arania.jpg',
+      'buo.jpg',
+      'elefante.jpg',
+      'gato.jpg',
+      'tigre.jpg',
+      'cafe.jpg',
+      'concierto.jpg',
+      'aurora.jpg'
+];
   return (
     <div class="home-body">
       <section className="nosotros-section fade-on-scroll">
@@ -31,162 +47,57 @@ const Home = () => {
       </section>
 
       <section className="mision-section fade-on-scroll">
-        <div className="mision-contenido" id="texto2">
-          <img src="/img/sol.png" alt="Icono Misión" className="mision-icono" />
-          <h2>Nuestra misión</h2>
-          <p>
-            es ayudarte a impulsar tu negocio conectando con tu mercado ideal a{' '}
-            <strong>
-              <em>través de soluciones de marketing digital y diseño que reflejen tu esencia</em>
-            </strong>
-            , generen impacto y te permitan crecer en tu sector.
-          </p>
+        <div className="mision-flex">
+          <div className="mision-contenido" id="texto2">
+            <img src="/img/sol.png" alt="Icono Misión" className="mision-icono" />
+            <h2>Nuestra misión</h2>
+            <p>
+              es ayudarte a impulsar tu negocio conectando con tu mercado ideal a{' '}
+              <strong>
+                <em>través de soluciones de marketing digital y diseño que reflejen tu esencia</em>
+              </strong>, generen impacto y te permitan crecer en tu sector.
+            </p>
+          </div>
         </div>
       </section>
 
 
+
       <div className="cuerpo">
 
+        <h2 className="galeria-titulo-vertical-palabra">
+          {"Fotitos".split("").map((letra, index) => (
+            <span key={index}>{letra === " " ? "\u00A0" : letra}</span>
+          ))}
+        </h2>
 
         <section className="images">
 
-          <div className="image active" style={{ backgroundImage: "url('/img/arania.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
+                  {imagenes.map((img, index) => (
+              <div
+                key={index}
+                className={`image ${activeIndex === index ? 'active' : ''}`}
+                style={{ backgroundImage: `url('/img/${img}')` }}
+                onClick={() => setActiveIndex(index)}
+              >
+                <div className="etiqueta">
+                  <div className="iconos-gal"><FontAwesomeIcon icon={fa500px} className="" /></div>
+                  <div className="info">
+                    <p className="main">@Hazamora.com</p>
+                    <p className="sub">Camara Nikon s200</p>
+                  </div>
+                </div>
               </div>
+            ))}
 
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="image active" style={{ backgroundImage: "url('/img/buo.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
-              </div>
-
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="image active" style={{ backgroundImage: "url('/img/elefante.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
-              </div>
-
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="image active" style={{ backgroundImage: "url('/img/gato.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
-              </div>
-
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="image active" style={{ backgroundImage: "url('/img/tigre.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
-              </div>
-
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="image active" style={{ backgroundImage: "url('/img/cafe.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
-              </div>
-
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="image active" style={{ backgroundImage: "url('/img/concierto.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
-              </div>
-
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="image active" style={{ backgroundImage: "url('/img/aurora.jpg')" }} >
-            <div className="etiqueta">
-
-              <div className="iconos-gal">
-
-
-              </div>
-
-              <div className="info">
-                <p className="main">@Hazamora.com</p>
-                <p className="sub">Camara Nikon s200</p>
-              </div>
-            </div>
-
-          </div>
-
-
-
-
-
-
-
-
-
+          
         </section>
+
+         <h2 className="galeria-titulo-vertical-palabra">
+          {"para ti".split("").map((letra, index) => (
+            <span key={index}>{letra === " " ? "\u00A0" : letra}</span>
+          ))}
+        </h2>
       </div>
 
       <section className="servicios-section">
