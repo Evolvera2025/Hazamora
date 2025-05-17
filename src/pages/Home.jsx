@@ -145,6 +145,38 @@ const Home = () => {
         </div>
       </section>
 
+          <section class="blog-section">
+
+            <div class="blog-left">
+              <img ClassName="icono estrella" src="img/estrella.png" alt="sparkles decorativos" />
+              <h1>
+                
+                <span class="blog-bold">Blogsito</span><br />
+                <span class="blog-light">para ti</span>
+              </h1>
+              
+                <img ClassName="icono estrella" src="img/estrella.png" alt="sparkles decorativos" />
+
+            </div>
+
+            <div class="blog-card">
+              <div class="card-image">
+                <img src="img/buo.jpg" alt="marketing" />
+              </div>
+              <div class="card-content">
+                <h2>Marketing en la actualidad</h2>
+                <p>
+                  Hoy el marketing va más allá de vender: se trata de conectar, emocionar y construir relaciones reales.
+                  En un mundo digital en constante cambio, las marcas que destacan son las que comunican con propósito,
+                  escuchan a su audiencia y se adaptan con creatividad.
+                </p>
+              </div>
+            </div>
+
+            <img ClassName="icono estrella" src="img/estrella.png" alt="sparkles decorativos" />
+         </section>
+
+
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-logo">
