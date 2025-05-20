@@ -34,7 +34,7 @@ body {
   padding: 25px 40px;
   color: #EAE0C8;
   z-index: 1000;
-  height: 80px;
+  height: 20px;
   backdrop-filter: blur(4px);
 }
 
@@ -60,6 +60,7 @@ body {
   margin-left: 35px;
   color: #EAE0C8;
   text-decoration: none;
+  font-size: 1.2rem; /* más grande */
   font-size: 1.7rem;
   transition: color 0.3s ease;
 }
