@@ -24,7 +24,7 @@ const Home = () => {
       'aurora.jpg'
 ];
   return (
-    <div class="home-body">
+    <div className="home-body">
       <section className="nosotros-section fade-on-scroll" id="inicio">
         <div className="texto-nosotros" id="texto">
           <h2>
@@ -145,25 +145,24 @@ const Home = () => {
         </div>
       </section>
 
-          <section class="blog-section" id="blog">
+          <section className="blog-section" id="blog">
 
-            <div class="blog-left">
-              <img ClassName="icono estrella" src="img/estrella.png" alt="sparkles decorativos" />
+            <div className="blog-left">
+              <img className="icono sparkles-img" src="/img/estrella.png" alt="estrella" />
               <h1>
-                
-                <span class="blog-bold">Blogsito</span><br />
-                <span class="blog-light">para ti</span>
+                <span className="blog-bold">Blogsito</span><br />
+                <span className="blog-light">para ti</span>
               </h1>
               
-                <img ClassName="icono estrella" src="img/estrella.png" alt="sparkles decorativos" />
+                <img className="icono sparkles-img" src="/img/estrella.png" alt="estrella" />
 
             </div>
 
-            <div class="blog-card">
-              <div class="card-image">
+            <div className="blog-card">
+              <div className="card-image">
                 <img src="img/buo.jpg" alt="marketing" />
               </div>
-              <div class="card-content">
+              <div className="card-content">
                 <h2>Marketing en la actualidad</h2>
                 <p>
                   Hoy el marketing va más allá de vender: se trata de conectar, emocionar y construir relaciones reales.
@@ -173,7 +172,7 @@ const Home = () => {
               </div>
             </div>
 
-            <img ClassName="icono estrella" src="img/estrella.png" alt="sparkles decorativos" />
+            <img className="icono sparkles-img" src="/img/estrella.png" alt="estrella" />
          </section>
 
 
