@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import '/public/styles/Navbar.css'
+import '/public/styles/Navbar.css';
 
 function Navbar() {
   const location = useLocation();
-
-  // Obtén el hash actual (ejemplo: #mision)
   const currentHash = location.hash;
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav className="navbar">
@@ -14,7 +16,10 @@ function Navbar() {
           <img src="img/LOGO HAZAMORA BLANCO-02.png" alt="Logo Hazamora" className="logo-img" />
         </a>
       </div>
-      <div className="links">
+      <button className="hamburger" onClick={toggleMenu}>
+        ☰
+      </button>
+      <div className={`links ${isOpen ? 'open' : ''}`}>
         <a href="#inicio" className={currentHash === '#inicio' || currentHash === '' ? 'active' : ''}>Inicio</a>
         <a href="#nosotras" className={currentHash === '#nosotras' ? 'active' : ''}>Nosotras</a>
         <a href="#mision" className={currentHash === '#mision' ? 'active' : ''}>Misión</a>
@@ -27,3 +32,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
