@@ -23,6 +23,17 @@ const Home = () => {
       'concierto.jpg',
       'aurora.jpg'
 ];
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    window.scrollTo({
+      top: section.offsetTop - 100, // Ajusta el desplazamiento superior
+      behavior: 'smooth',
+    });
+  }
+};
+
   return (
     <div className="home-body">
       <section className="nosotros-section fade-on-scroll" id="inicio">
@@ -107,7 +118,12 @@ const Home = () => {
             <strong>Impulsando</strong>
           </h2>
           <p>tu marca con</p>
-          <button className="boton-contacto">CONTÁCTANOS!</button>
+          <button
+            className="boton-contacto"
+            onClick={() => window.location.href = 'https://wa.me/5210000000000'}
+          >
+            CONTÁCTANOS!
+          </button>
         </div>
 
         <div className="servicios-derecha">

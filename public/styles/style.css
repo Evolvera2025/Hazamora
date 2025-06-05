@@ -10,9 +10,6 @@ html
   scroll-behavior: smooth;
 }
 
-[id] {
-  scroll-margin-top: 500px;
-}
 
 .section
 {
@@ -35,8 +32,7 @@ html
   z-index: 10; 
   min-height: 100vh;
   min-width: 100vh;
-  scroll-margin-top: 100px;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
 }
 
 .texto-nosotros {
@@ -202,7 +198,7 @@ html
   min-height: 100vh;
   align-items: center;
   width: 100%;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
 }
 
 .mision-contenido {
@@ -270,7 +266,12 @@ html
   flex-direction: row;
   padding: 4rem 2rem;
   background-color: #fdfdf9;
-  scroll-margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
 }
 
 .servicios-izquierda
@@ -284,6 +285,7 @@ html
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   align-items: center;
+  min-height: 51vh;
 }
 
 /* ## ICONO CON ANIMACIONES */
@@ -350,7 +352,8 @@ html
 .servicios
 {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
@@ -474,6 +477,7 @@ html
   min-height: 100vh;
   padding: 4rem 2rem;
   gap: 4rem;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
 }
 
 @media (min-width: 1050px) {

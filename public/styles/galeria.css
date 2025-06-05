@@ -8,12 +8,11 @@
 {
   display: flex;
   justify-content: center;
-  height: 145vh;
+  height: 100vh;
   align-items: center;
   overflow: hidden;
   transition: all 0.5s;
   background-color: var(--hazamora1);
-  scroll-margin-top: 500x;
 }
 
 .cuerpo .images 
