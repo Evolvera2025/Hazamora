@@ -30,8 +30,8 @@ html
   position: relative; 
   padding-right: 0px;
   z-index: 10; 
-  min-height: 100vh;
-  min-width: 100vh;
+  min-height: 70vh;
+  min-width: auto;
   scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
 }
 
@@ -171,7 +171,7 @@ html
 
   .img-phone {
     width: 200px;
-    padding-left: 0px;
+    margin: 0 auto;
   }
 
   .icono {
@@ -184,6 +184,114 @@ html
 
   .texto-nosotros p {
     font-size: 1rem;
+  }
+}
+
+/* Ajustes responsivos generales */
+@media (max-width: 768px) {
+  .nosotros-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .texto-nosotros {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .texto-nosotros h2 {
+    font-size: 2rem;
+  }
+
+  .texto-nosotros p {
+    font-size: 1rem;
+  }
+
+  .nosotros-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .img-phone {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .icono {
+    display: none;
+  }
+
+  .mision-section {
+    padding: 2rem 1rem;
+  }
+
+  .mision-contenido {
+    max-width: 100%;
+  }
+
+  .servicios-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .servicios-izquierda,
+  .servicios-derecha {
+    flex: 1 1 100%;
+    border-radius: 0;
+    margin-bottom: 1rem;
+  }
+
+  .blog-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .blog-card {
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .texto-nosotros h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto-nosotros p {
+    font-size: 0.9rem;
+  }
+
+  .img-phone {
+    width: 150px;
+  }
+
+  .mision-contenido h2 {
+    font-size: 1.8rem;
+  }
+
+  .mision-contenido p {
+    font-size: 0.9rem;
+  }
+
+  .blog-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .blog-bold {
+    font-size: 3rem;
+  }
+
+  .blog-light {
+    font-size: 2rem;
   }
 }
 
@@ -591,6 +699,47 @@ html
   font-size: 1rem;
   line-height: 1.6;
   padding: 0 1rem;
+}
+
+.cuerpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--hazamora1);
+  transition: background-color 0.3s ease;
+  position: relative; /* Necesario para posicionar los iconos flotantes */
+}
+
+.cuerpo .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+/* Estilos específicos para el carrusel del equipo */
+#equipo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#equipo p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#equipo .shadow-lg {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#equipo button {
+  transition: transform 0.3s ease;
+}
+
+#equipo button:hover {
+  transform: scale(1.1);
 }
 
 

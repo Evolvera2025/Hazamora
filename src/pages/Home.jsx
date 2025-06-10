@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '/public/styles/style.css';
 import '/public/js/index.js';
 import '/public/styles/galeria.css';
@@ -10,29 +10,35 @@ import { faInstagram, faFacebookF, faWhatsapp, fa500px} from '@fortawesome/free-
 
 
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-    const [activeIndex, setActiveIndex] = useState(0);
+  const imagenes = [
+    { src: 'arania.jpg', ig: 'https://instagram.com/integrante1' },
+    { src: 'buo.jpg', ig: 'https://instagram.com/integrante2' },
+    { src: 'elefante.jpg', ig: 'https://instagram.com/integrante3' },
+    { src: 'gato.jpg', ig: 'https://instagram.com/integrante4' },
+    { src: 'tigre.jpg', ig: 'https://instagram.com/integrante5' },
+    { src: 'cafe.jpg', ig: 'https://instagram.com/integrante6' },
+    { src: 'concierto.jpg', ig: 'https://instagram.com/integrante7' },
+    { src: 'aurora.jpg', ig: 'https://instagram.com/integrante8' },
+  ];
 
-    const imagenes = [
-      'arania.jpg',
-      'buo.jpg',
-      'elefante.jpg',
-      'gato.jpg',
-      'tigre.jpg',
-      'cafe.jpg',
-      'concierto.jpg',
-      'aurora.jpg'
-];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % imagenes.length);
+    }, 3000); // Cambia de imagen cada 3 segundos
+    return () => clearInterval(interval);
+  }, [imagenes.length]);
 
-const scrollToSection = (id) => {
-  const section = document.getElementById(id);
-  if (section) {
-    window.scrollTo({
-      top: section.offsetTop - 100, // Ajusta el desplazamiento superior
-      behavior: 'smooth',
-    });
-  }
-};
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 100, // Ajusta el desplazamiento superior
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <div className="home-body">
@@ -46,7 +52,7 @@ const scrollToSection = (id) => {
             <span className="resaltado">creatividad</span> para hacer de tus ideas una realidad.
           </p>
         </div>
-        <div>
+        <div className="nosotros-imagenes">
           <img className="img-phone" src="/img/Telefono.png" alt="teléfono mostrando Instagram" />
          
           <img className="icono bombilla" src="/img/Bombilla1.png" alt="bombilla" />
@@ -75,40 +81,31 @@ const scrollToSection = (id) => {
 
 
       <div className="cuerpo">
-
-        <h2 className="galeria-titulo-vertical-palabra">
-          {"Fotitos".split("").map((letra, index) => (
-            <span key={index}>{letra === " " ? "\u00A0" : letra}</span>
-          ))}
-        </h2>
-
+        <div className="galeria-titulo" style={{ textAlign: 'center', marginRight: '100px' }}>
+          <img className="icono decorativo izquierda" src="/img/estrella.png" alt="decoración izquierda" />
+          <h2 className="galeria-titulo-estilizado">Conócenos</h2>
+          <p className="galeria-subtitulo">Descubre a nuestro equipo creativo</p>
+          <img className="icono decorativo derecha" src="/img/mensaje.png" alt="decoración derecha" />
+        </div>
         <section className="images" id="nosotras">
-
-                  {imagenes.map((img, index) => (
-              <div
-                key={index}
-                className={`image ${activeIndex === index ? 'active' : ''}`}
-                style={{ backgroundImage: `url('/img/${img}')` }}
-                onClick={() => setActiveIndex(index)}
-              >
-                <div className="etiqueta">
-                  <div className="iconos-gal"><FontAwesomeIcon icon={fa500px} className="" /></div>
-                  <div className="info">
-                    <p className="main">@Hazamora.com</p>
-                    <p className="sub">Camara Nikon s200</p>
-                  </div>
+          {imagenes.map((img, index) => (
+            <a
+              key={index}
+              href={img.ig}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`image ${activeIndex === index ? 'active' : ''}`}
+              style={{ backgroundImage: `url('/img/${img.src}')` }}
+            >
+              <div className="overlay">
+                <div className="info">
+                  <p className="main">@Hazamora.com</p>
+                  <p className="sub">Cámara Nikon s200</p>
                 </div>
               </div>
-            ))}
-
-          
-        </section>
-
-         <h2 className="galeria-titulo-vertical-palabra">
-          {"para ti".split("").map((letra, index) => (
-            <span key={index}>{letra === " " ? "\u00A0" : letra}</span>
+            </a>
           ))}
-        </h2>
+        </section>
       </div>
 
       <section className="servicios-section" id='servicios'>
