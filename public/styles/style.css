@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap');
+
 :root {
   --hazamora1: #263E3E;
   --hazamora2: #13685A;
@@ -35,21 +37,75 @@ html
   scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
 }
 
-.texto-nosotros {
-  max-width: 50%;
-  animation: fadeInUp 0.5s ease-out forwards;
-  opacity: 0;
-}
 
-.texto-nosotros h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+.hero-text-container {
+            text-align: center;
+          }
 
-.texto-nosotros p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
+          .hero-text-container p, .hero-text-container h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+          }
+
+          .line-1 {
+            font-size: 3rem; /* Tamaño base para móvil */
+            font-weight: 200; /* Letra más delgada */
+            font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+          }
+          .line-2 {
+            font-size: 3rem;
+            font-weight: 300;
+            font-family: 'Montserrat', sans-serif;
+          }
+          .line-3 {
+            font-size: 3rem;
+            font-weight: 700; 
+          }
+
+          .description-container {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.6;
+          }
+
+          /* Tabletas */
+          @media (min-width: 768px) {
+            .hero-text-container {
+              text-align: left;
+            }
+            .description-container {
+               text-align: left;
+            }
+            .line-1 {
+              font-size: 4.5rem;
+            }
+            .line-2 {
+              font-size: 4.5rem;
+            }
+            .line-3 {
+              font-size: 5.5rem;
+            }
+            .description-container {
+              font-size: 2rem;
+            }
+          }
+
+          /* Escritorio */
+          @media (min-width: 1024px) {
+            .line-1 {
+              font-size: 5rem;
+            }
+            .line-2 {
+              font-size: 5rem;
+            }
+            .line-3 {
+              font-size: 6.5rem;
+            }
+            .description-container {
+              font-size: 1.50rem;
+            }
+          }
 
 .resaltado {
   font-weight: bold;
@@ -195,18 +251,28 @@ html
     padding: 2rem 1rem;
   }
 
-  .texto-nosotros {
-    max-width: 100%;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
+  #texto {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #20514b; /* similar al color de fondo */
+  padding: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
   }
 
-  .texto-nosotros h2 {
+  #texto h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  #texto .resaltado {
+    font-weight: 700;
+  }
+
+  #texto p {
     font-size: 2rem;
-  }
-
-  .texto-nosotros p {
-    font-size: 1rem;
+    font-weight: 300;
   }
 
   .nosotros-imagenes {

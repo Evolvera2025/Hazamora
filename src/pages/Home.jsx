@@ -12,6 +12,20 @@ import { faInstagram, faFacebookF, faWhatsapp, fa500px} from '@fortawesome/free-
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const homeContainerStyles = {
+    display: 'flex',
+    alignItems: 'center',
+    minHeight: '30vh',
+    padding: '1rem',
+    fontFamily: "'Inter', sans-serif",
+    color: 'white',
+  };
+
+  // Estilos para la tarjeta de contenido
+  const contentCardStyles = {
+    width: '70%',
+  };
+
   const imagenes = [
     { src: 'arania.jpg', ig: 'https://instagram.com/integrante1' },
     { src: 'buo.jpg', ig: 'https://instagram.com/integrante2' },
@@ -43,15 +57,27 @@ const Home = () => {
   return (
     <div className="home-body">
       <section className="nosotros-section fade-on-scroll" id="inicio">
-        <div className="texto-nosotros" id="texto">
-          <h2>
-            Somos una agencia de <span className="resaltado">Marketing Digital y Diseño</span>
-          </h2>
-          <p>
-            Enfocada en impulsar tu proyecto combinando <span className="resaltado">estrategia</span> y{' '}
-            <span className="resaltado">creatividad</span> para hacer de tus ideas una realidad.
-          </p>
+      <div style={homeContainerStyles}>
+        
+        {/* Tarjeta de Contenido */}
+        <div style={contentCardStyles}>
+
+          {/* Texto Principal */}
+          <div className="hero-text-container">
+            <p className="line-1">Somos</p>
+            <p className="line-2">una agencia de</p>
+            <h1 className="line-3">Marketing Digital y Diseño</h1>
+          </div>
+
+          {/* Descripción */}
+          <div className="description-container">
+            <p>enfocada en impulsar tu proyecto</p>
+            <p>combinando <strong style={{ fontWeight: 700 }}>estrategia y creatividad</strong></p>
+            <p style={{ fontSize: '2.5rem', fontFamily: 'Montserrat, sans-serif'}}><strong style={{ fontWeight: 700 }}>para hacer de tus ideas, una realidad.</strong></p>
+          </div>
+          
         </div>
+      </div>
         <div className="nosotros-imagenes">
           <img className="img-phone" src="/img/Telefono.png" alt="teléfono mostrando Instagram" />
          
