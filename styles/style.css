@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap');
+
+:root {
+  --hazamora1: #263E3E;
+  --hazamora2: #13685A;
+  --hazamora3: #C2751A;
+  --hazamora4: #EB9410;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+
+.section
+{
+  object-fit: contain;
+}
+
+
+.nosotros-section {
+  padding-left: 40px;
+  background-color: var(--hazamora2);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  position: relative; 
+  padding-right: 0px;
+  z-index: 10; 
+  min-height: 70vh;
+  min-width: auto;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
+}
+
+
+.hero-text-container {
+            text-align: center;
+          }
+
+          .hero-text-container p, .hero-text-container h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+          }
+
+          .line-1 {
+            font-size: 3rem; /* Tamaño base para móvil */
+            font-weight: 200; /* Letra más delgada */
+            font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+          }
+          .line-2 {
+            font-size: 3rem;
+            font-weight: 300;
+            font-family: 'Montserrat', sans-serif;
+          }
+          .line-3 {
+            font-size: 3rem;
+            font-weight: 700; 
+          }
+
+          .description-container {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.6;
+          }
+
+          /* Tabletas */
+          @media (min-width: 768px) {
+            .hero-text-container {
+              text-align: left;
+            }
+            .description-container {
+               text-align: left;
+            }
+            .line-1 {
+              font-size: 4.5rem;
+            }
+            .line-2 {
+              font-size: 4.5rem;
+            }
+            .line-3 {
+              font-size: 5.5rem;
+            }
+            .description-container {
+              font-size: 2rem;
+            }
+          }
+
+          /* Escritorio */
+          @media (min-width: 1024px) {
+            .line-1 {
+              font-size: 5rem;
+            }
+            .line-2 {
+              font-size: 5rem;
+            }
+            .line-3 {
+              font-size: 6.5rem;
+            }
+            .description-container {
+              font-size: 1.50rem;
+            }
+          }
+
+.resaltado {
+  font-weight: bold;
+  color: #EB9410;
+}
+
+.img-phone {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+  margin-right: 0%;
+  z-index: 10; 
+  position: relative; 
+}
+
+/* ANIMACIONES ICONOS */
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ESTILOS DE ICONOS */
+.icono {
+  position: absolute;
+  width: 60px;
+  animation: float 4s infinite;
+  z-index: 10;
+}
+
+.bombilla {
+  top: 50%;
+  right: 25%;
+}
+
+.estrella {
+  bottom: 10%;
+  left: 85%;
+  animation-delay: 1s;
+}
+
+.mensaje {
+  top: 20%;
+  left: 93%;
+  animation-delay: 2s;
+  width: 90px;
+}
+
+.admiracion
+{
+  top: 35%;
+  left: 53%;
+  animation-delay: 2s;
+  width: 120px;
+}
+
+.onomatopella
+{
+  top: 2%;
+  left: 62%;
+  animation-delay: 2s;
+  width: 100px;
+}
+
+/* Activar animación al entrar al viewport (opcional JS) 
+.visible {
+  opacity: 1;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.fade-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+*/
+
+/* ####################################################### */
+/* RESPONSIVE DE LA PAGINA */
+/* En móviles, cambia la dirección a columna */
+@media (max-width: 1055px) {
+  .nosotros-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .onomatopella
+  {
+    width: 150px;
+    top: 50%;
+  }
+
+  .texto-nosotros {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .img-phone {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .icono {
+    display: none; 
+  }
+
+  .texto-nosotros h2 {
+    font-size: 2rem;
+  }
+
+  .texto-nosotros p {
+    font-size: 1rem;
+  }
+}
+
+/* Ajustes responsivos generales */
+@media (max-width: 768px) {
+  .nosotros-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  #texto {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #20514b; /* similar al color de fondo */
+  padding: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  }
+
+  #texto h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  #texto .resaltado {
+    font-weight: 700;
+  }
+
+  #texto p {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .nosotros-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .img-phone {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .icono {
+    display: none;
+  }
+
+  .mision-section {
+    padding: 2rem 1rem;
+  }
+
+  .mision-contenido {
+    max-width: 100%;
+  }
+
+  .servicios-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .servicios-izquierda,
+  .servicios-derecha {
+    flex: 1 1 100%;
+    border-radius: 0;
+    margin-bottom: 1rem;
+  }
+
+  .blog-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .blog-card {
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .texto-nosotros h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto-nosotros p {
+    font-size: 0.9rem;
+  }
+
+  .img-phone {
+    width: 150px;
+  }
+
+  .mision-contenido h2 {
+    font-size: 1.8rem;
+  }
+
+  .mision-contenido p {
+    font-size: 0.9rem;
+  }
+
+  .blog-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .blog-bold {
+    font-size: 3rem;
+  }
+
+  .blog-light {
+    font-size: 2rem;
+  }
+}
+
+/* ################# SECCION 2 MISION ##################### */
+
+.mision-section {
+  background-color: #dddddd;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
+}
+
+.mision-contenido {
+  max-width: 700px;
+  color: #1d3f35;
+}
+
+.mision-icono {
+  width: 110px;
+  margin-bottom: 5px;
+}
+
+.mision-contenido h2 {
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.mision-contenido h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--hazamora1);
+  margin: 0.5rem auto;
+}
+
+.mision-contenido p {
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  padding: 0 1rem;
+}
+
+.mision-contenido strong em {
+  font-weight: bold;
+  font-style: italic;
+  color: #1d3f35;
+}
+
+@media (max-width: 600px) {
+  .mision-contenido h2 {
+    font-size: 2rem;
+  }
+
+  .mision-contenido p {
+    font-size: 1rem;
+  }
+}
+
+/* MOSION AGREGADOS */
+
+/*---------------------------------*/
+
+/* ################# SECCION 3 SERVICIOS ##################### */
+
+.servicios-section
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 4rem 2rem;
+  background-color: #fdfdf9;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
+}
+
+.servicios-izquierda
+{
+  flex: 1 1 300px;
+  background-color: var(--hazamora1);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  align-items: center;
+  min-height: 51vh;
+}
+
+/* ## ICONO CON ANIMACIONES */
+.servicios-izquierda .icono-c
+{
+  width: 200px;
+  margin-bottom: 5px;
+  animation: latido 2s infinite ease-in-out;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+.servicios-izquierda h2
+{
+  font-size: 2rem;
+  margin-bottom: 1px;
+}
+
+.servicios-izquierda p
+{
+  margin-top: 0px;
+  font-size: 20px;
+}
+
+.boton-contacto
+{
+  background-color: white;
+  color: #1d3f35;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-contacto:hover
+{
+  background-color: #e1e1e1;
+}
+
+.servicios-derecha
+{
+  flex: 2 1 400px;
+  padding: 2rem;
+  background-color: rgb(232, 231, 231);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.servicios
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.linea
+{
+  width: 30px;
+  height: 12px;
+  background-color: #0f5b4c;
+  margin-right: 1rem;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+.linea.gris
+{
+  background-color: #c3d0ca;
+}
+
+.servicios h3
+{
+  color: #0f5b4c;
+  margin: 0 0 0.5rem;
+}
+
+.servicios p
+{
+  margin: 0;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .servicios {
+    flex-direction: column;
+  }
+
+  .servicios-left, .servicios-right {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
+
+.footer {
+  background-color: var(--hazamora1);
+  color: #EAE0C8;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Mayor separación entre logo, redes y contacto */
+}
+
+.footer-logo {
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  height: 300px;
+  transform: scale(1.5);
+  transform-origin: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  font-size: 1.6rem;
+}
+
+.footer-social a {
+  color: #EAE0C8;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon {
+  margin: 0 15px; /* Agrega espacio entre cada icono */
+  font-size: 24px; /* Puedes ajustar el tamaño de los iconos si lo deseas */
+}
+
+.footer-social a:hover {
+  color: var(--hazamora4);
+  transform: scale(1.2);
+}
+
+.footer-contacto p {
+  margin: 2px 0;
+  font-size: 1rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 600px) {
+  .footer-social {
+    font-size: 1.4rem;
+  }
+
+  .footer-logo {
+    height: 90px;
+  }
+
+  .footer-logo img {
+    height: 80px;
+    transform: scale(1.3);
+  }
+}
+
+/*CSS PARA LA SECCION DEL BLOG */
+
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8faf9;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  gap: 4rem;
+  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
+}
+
+@media (min-width: 1050px) {
+  .blog-section {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.blog-left {
+  text-align: center;
+}
+
+.blog-left h1 {
+  font-size: 4.5rem;
+  line-height: 1.2;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 0px;
+}
+
+.blog-bold {
+  font-weight: 900;
+  color: #2f5f55;
+  font-size: 5rem;
+  text-shadow: 2px 2px #dbe8e3;
+  letter-spacing: -1px;
+}
+
+.blog-light {
+  font-weight: 300;
+  font-size: 4rem;
+  color: #111;
+  display: inline-block;
+  position: relative;
+  margin-top: -1rem;
+}
+
+.blog-light::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #dbe8e3;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.sparkles-img img {
+  width: 60px;
+  margin-top: 1rem;
+  bottom: 10%;
+  left: 85%;
+  animation-delay: 1s;
+}
+
+/* Card general */
+.blog-card {
+  position: relative;
+  background-color: #2f5f55;
+  color: white;
+  padding: 4rem 3rem 3rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 570px) {
+  .blog-card {
+    max-width: 400;
+  }
+}
+
+/* Imagen centrada flotante */
+.card-image {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1000;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+  margin-top: 3rem;
+}
+
+.card-content h2 {
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+.cuerpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--hazamora1);
+  transition: background-color 0.3s ease;
+  position: relative; /* Necesario para posicionar los iconos flotantes */
+}
+
+.cuerpo .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+/* Estilos específicos para el carrusel del equipo */
+#equipo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#equipo p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#equipo .shadow-lg {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#equipo button {
+  transition: transform 0.3s ease;
+}
+
+#equipo button:hover {
+  transform: scale(1.1);
+}
+
+
+

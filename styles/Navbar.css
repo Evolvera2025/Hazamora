@@ -1,0 +1,116 @@
+:root {
+  --hazamora1: #263E3E;
+  --hazamora2: #13685A;
+  --hazamora3: #C2751A;
+  --hazamora4: #EB9410;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: var(--hazamora2);
+  margin-bottom: 1000px;
+  position: relative;
+  z-index: 0;
+  padding-top: 80px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ background-color: rgba(38, 62, 62, 0.85);
+  padding: 25px 40px;
+  color: #EAE0C8;
+  z-index: 1000;
+  height: 80px;
+  backdrop-filter: blur(4px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--hazamora3);
+}
+
+.logo-img {
+  height: 300px; 
+  margin-right: 10px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  margin-left: 35px;
+  color: #EAE0C8;
+  text-decoration: none;
+  font-size: 1.2rem; /* más grande */
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: var(--hazamora4);
+}
+
+.links a.active {
+  color: var(--hazamora4);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #EAE0C8;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: rgba(38, 62, 62, 0.95);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .links a {
+    margin: 15px 0;
+    font-size: 1.5rem;
+  }
+
+  .logo-img {
+    height: 150px; 
+  }
+}
