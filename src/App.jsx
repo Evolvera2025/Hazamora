@@ -1,25 +1,13 @@
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Nosotras from './pages/Nosotras';
-import Servicios from './pages/Servicios';
-import Blog from './pages/Blog';
-import Contacto from './pages/Contacto';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home1 } from './pages/Home1'
 
 function App() {
+
   return (
-    <>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/nosotras" element={<Nosotras />} />
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contacto" element={<Contacto />} />
+        <Route index element={<Home1 />} />
       </Routes>
-    </>
-  );
+  )
 }
 
 export default App;

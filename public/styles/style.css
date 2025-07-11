@@ -363,69 +363,7 @@ html
 
 /* ################# SECCION 2 MISION ##################### */
 
-.mision-section {
-  background-color: #dddddd;
-  padding: 4rem 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: center;
-  width: 100%;
-  scroll-margin-top: 100px; /* Ajusta el margen superior al hacer scroll */
-}
 
-.mision-contenido {
-  max-width: 700px;
-  color: #1d3f35;
-}
-
-.mision-icono {
-  width: 110px;
-  margin-bottom: 5px;
-}
-
-.mision-contenido h2 {
-  animation: fadeInUp 1.2s ease-out forwards;
-  opacity: 0;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  position: relative;
-}
-
-.mision-contenido h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: var(--hazamora1);
-  margin: 0.5rem auto;
-}
-
-.mision-contenido p {
-  animation: fadeInUp 1.2s ease-out forwards;
-  opacity: 0;
-  font-size: 1.125rem;
-  line-height: 1.8;
-  padding: 0 1rem;
-}
-
-.mision-contenido strong em {
-  font-weight: bold;
-  font-style: italic;
-  color: #1d3f35;
-}
-
-@media (max-width: 600px) {
-  .mision-contenido h2 {
-    font-size: 2rem;
-  }
-
-  .mision-contenido p {
-    font-size: 1rem;
-  }
-}
 
 /* MOSION AGREGADOS */
 

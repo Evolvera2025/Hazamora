@@ -1,0 +1,262 @@
+
+/* Mision.css */
+/* Mision.css */
+
+.mision-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--hazamora2) 0%, #13685A 50%, #263E3E 100%);
+  padding: 5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mision-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header con icono */
+.mision-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.mision-icon-wrapper {
+  position: relative;
+}
+
+.mision-icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px var(--shadow);
+  transition: var(--transition);
+}
+
+.mision-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(235, 148, 16, 0.3);
+}
+
+.mision-icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.mision-line {
+  height: 2px;
+  width: 8rem;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+/* Contenido principal */
+.mision-main {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mision-title {
+  font-family: var(--font-primary);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--background);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mision-title-highlight {
+  background: linear-gradient(135deg, var(--hazamora3) 0%, var(--hazamora4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.mision-text {
+  margin: 2rem 0;
+}
+
+.mision-text p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--border);
+  font-family: var(--font-primary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mision-text strong {
+  color: var(--border);
+  font-weight: 600;
+}
+
+.mision-emphasis {
+  background: linear-gradient(135deg, var(--hazamora3) 0%, var(--hazamora4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+/* Características destacadas */
+
+
+/* Elementos decorativos */
+.mision-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mision-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.mision-decoration-1 {
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.mision-decoration-2 {
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(135deg, var(--background), var(--surface));
+  bottom: 5%;
+  left: 15%;
+  animation-delay: 3s;
+}
+
+.mision-decoration-3{
+  width: 10rem;
+  height: 10rem;
+  background: linear-gradient(135deg, var(--background), var(--surface));
+  bottom: 80%;
+  left: 1%;
+  animation-delay: 3s;
+}
+
+.mision-decoration-4{
+  width: 14rem;
+  height: 14rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  top: 80%;
+  right: 2%;
+  animation-delay: 3s;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+/* Animación de aparición */
+.fade-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Si quieres activar la animación de aparición más tarde, usa esta clase */
+.fade-on-scroll.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mision-section {
+    padding: 3rem 1rem;
+  }
+  
+  .mision-title {
+    font-size: 2.5rem;
+  }
+  
+  .mision-text p {
+    font-size: 1.1rem;
+  }
+  
+  .mision-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .mision-feature {
+    padding: 1.5rem;
+  }
+  
+  .mision-line {
+    width: 4rem;
+  }
+  
+  .mision-decoration-1,
+  .mision-decoration-2 {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mision-title {
+    font-size: 2rem;
+  }
+  
+  .mision-text p {
+    font-size: 1rem;
+  }
+  
+  .mision-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .mision-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .mision-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

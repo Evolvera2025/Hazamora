@@ -36,6 +36,7 @@ body {
   z-index: 1000;
   height: 80px;
   backdrop-filter: blur(4px);
+  margin-bottom: 50px;
 }
 
 .logo {

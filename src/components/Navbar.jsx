@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import '/public/styles/Navbar.css';
 
-function Navbar() {
+export function Navbar() {
   const location = useLocation();
   const currentHash = location.hash;
   const [isOpen, setIsOpen] = useState(false);

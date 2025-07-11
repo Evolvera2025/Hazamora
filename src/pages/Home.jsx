@@ -44,15 +44,6 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [imagenes.length]);
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 100, // Ajusta el desplazamiento superior
-        behavior: 'smooth',
-      });
-    }
-  };
 
   return (
     <div className="home-body">
