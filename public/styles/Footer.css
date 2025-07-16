@@ -1,0 +1,96 @@
+/* src/components/Footer.css */
+
+:root {
+  --hazamora-dark-green: #26534E;
+  --hazamora-medium-green: #13685A;
+  --hazamora-orange-brown: #C2751A;
+  --hazamora-bright-orange: #EB9410;
+
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+
+  --font-principal: 'Dairy Cattle Solid', serif;
+  --font-secondary: 'Louis George Cafe', sans-serif;
+}
+
+.footer {
+  background-color: var(--hazamora-dark-green);
+  color: var(--text-color-light);
+  padding: 20px 20px;
+  font-family: var(--font-secondary);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 20px; 
+}
+
+.footer-logo img {
+  max-width: 600px; 
+  width: 100%; 
+  height: auto; 
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.footer-social {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-social .social-icon {
+  font-size: 1.8em;
+  color: var(--text-color-light);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover .social-icon {
+  color: var(--hazamora-bright-orange);
+  transform: scale(1.1);
+}
+
+.footer-info {
+  font-size: 0.95em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info .footer-copyright {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.footer-info .footer-email a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-info .footer-email a:hover {
+  color: var(--hazamora-medium-green);
+  text-decoration: underline;
+}
+
+/* Ajustes responsivos para tamaños muy pequeños */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 15px;
+  }
+  .footer-social {
+    gap: 18px;
+  }
+  .footer-social .social-icon {
+    font-size: 1.5em;
+  }
+  .footer-info {
+    font-size: 0.85em;
+  }
+}
