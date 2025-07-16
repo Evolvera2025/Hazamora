@@ -1,0 +1,223 @@
+
+:root {
+  --hazamora-dark-green: #26534E; /* Estabilidad, profesionalismo y confianza  */
+  --hazamora-medium-green: #13685A; /* Renovación, frescura e innovación  */
+  --hazamora-orange-brown: #C2751A; /* Convertimos tus ideas en realidades  */
+  --hazamora-bright-orange: #EB9410; /* Espíritu joven, apasionado y vibrante  */
+
+  --text-color-light: #f0f0f0;
+  --text-color-dark: #333;
+  --text-color-gray: #666;
+
+  
+  --font-principal: 'Dairy Cattle Solid', serif;
+  --font-secondary: 'Louis George Cafe', sans-serif;
+}
+
+
+.hazamora-form-container {
+  max-width: 650px; 
+  margin: 60px auto; 
+  padding: 50px; 
+  background-color: #ffffff;
+  border-radius: 12px; 
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
+  text-align: center;
+  font-family: var(--font-secondary);
+  color: var(--text-color-dark);
+  position: relative; 
+  overflow: hidden; 
+}
+
+/* --- Elementos Decorativos (inspirados en las formas orgánicas del manual) --- */
+/* Puedes añadir elementos sutiles con pseudo-elementos o divs */
+.hazamora-form-container::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 120px;
+  height: 120px;
+  background-color: var(--hazamora-bright-orange); 
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+  filter: blur(20px);
+}
+
+.hazamora-form-container::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--hazamora-medium-green); 
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+  filter: blur(25px);
+}
+
+
+/* --- Títulos del Formulario --- */
+.form-title {
+  font-family: var(--font-principal);
+  color: var(--hazamora-dark-green);
+  font-size: 3em; 
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.form-subtitle {
+  color: var(--text-color-gray);
+  font-size: 1.2em; 
+  margin-bottom: 40px; 
+  font-weight: 300; 
+}
+
+/* --- Contenedor del Formulario --- */
+.hazamora-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; 
+  text-align: left;
+  position: relative; 
+  z-index: 1; 
+}
+
+/* --- Grupos de Formulario (Label e Input/Textarea) --- */
+.form-group label {
+  display: block;
+  margin-bottom: 10px; 
+  font-weight: 600; 
+  color: var(--hazamora-dark-green);
+  font-size: 1.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: calc(100% - 24px); 
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;
+  font-size: 1.05em;
+  font-family: var(--font-secondary);
+  color: var(--text-color-dark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fcfcfc; 
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--hazamora-orange-brown); 
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(194, 117, 26, 0.15); 
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px; 
+}
+
+
+.submit-button {
+  background-color: var(--hazamora-dark-green);
+  color: var(--text-color-light);
+  padding: 18px 30px; 
+  border: none;
+  border-radius: 10px; 
+  font-size: 1.3em; 
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-family: var(--font-principal); 
+  letter-spacing: 1.5px; 
+  text-transform: uppercase; 
+  box-shadow: 0 4px 15px rgba(38, 83, 78, 0.2); 
+}
+
+.submit-button:hover {
+  background-color: var(--hazamora-medium-green); 
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 20px rgba(38, 83, 78, 0.3); 
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+.success-message {
+  color: var(--hazamora-medium-green);
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.error-message {
+  color: #d9534f; 
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+
+@media (max-width: 768px) {
+  .hazamora-form-container {
+    margin: 30px 20px;
+    padding: 30px;
+  }
+  .form-title {
+    font-size: 2.2em;
+  }
+  .form-subtitle {
+    font-size: 1em;
+  }
+  .submit-button {
+    font-size: 1.1em;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hazamora-form-container {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+  .form-title {
+    font-size: 1.8em;
+  }
+}
+
+.form-group select {
+  width: calc(100% - 24px); 
+  padding: 14px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1.05em;
+  font-family: var(--font-secondary);
+  color: var(--text-color-dark);
+  background-color: #fcfcfc; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none; 
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22%20fill%3D%22%2326534E%22%2F%3E%3C%2Fsvg%3E'); /* Flecha personalizada */
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 1em; 
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  border-color: var(--hazamora-orange-brown);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(194, 117, 26, 0.15);
+}
+
+
+.form-group select option[value=""] {
+  color: #999;
+}
