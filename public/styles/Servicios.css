@@ -97,9 +97,9 @@
 .servicios-derecha {
   background-color: #fff;
   display: grid;
-  grid-template-columns: 1fr; /* Siempre una columna para formato de lista */
+  grid-template-columns: 1fr;
   gap: 30px;
-  max-width: 600px; /* Mantener este max-width para móvil si es deseado */
+  max-width: 600px;
   width: 100%;
   padding: 60px 20px;
 }
@@ -109,14 +109,14 @@
   align-items: flex-start;
   background-color: var(--hazamora-light-gray);
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 20px; /* Bordes más redondeados para efecto flotante */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra más suave y extendida */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .servicios:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-7px); /* Se eleva un poco más al pasar el ratón */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al flotar */
 }
 
 .servicios .linea {
@@ -157,8 +157,8 @@
   }
 
   .servicios-izquierda {
-    flex: 1; /* Ocupa la mitad */
-    max-width: none; /* Elimina el límite para que ocupe la mitad exacta */
+    flex: 1;
+    max-width: none;
     margin-bottom: 0;
     align-items: flex-start;
     text-align: left;
@@ -180,9 +180,9 @@
   }
 
   .servicios-derecha {
-    flex: 1; /* Ocupa la otra mitad */
-    grid-template-columns: 1fr; /* Mantiene el formato de lista */
-    max-width: none; /* Elimina el límite para que ocupe la mitad exacta */
+    flex: 1;
+    grid-template-columns: 1fr;
+    max-width: none;
     padding: 80px 40px;
   }
 
