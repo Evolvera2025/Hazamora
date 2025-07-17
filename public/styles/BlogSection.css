@@ -1,0 +1,233 @@
+/* src/BlogSection.css */
+
+:root {
+  --hazamora-dark-green: #26534E;
+  --hazamora-medium-green: #13685A;
+  --hazamora-orange-brown: #C2751A;
+  --hazamora-bright-orange: #EB9410;
+  --hazamora-light-gray: #f8f8f8;
+  --text-color-dark: #333;
+  --text-color-gray: #666;
+
+  --font-principal: 'Dairy Cattle Solid', serif;
+  --font-secondary: 'Louis George Cafe', sans-serif;
+}
+
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: var(--hazamora-light-gray);
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.blog-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.blog-left h1 {
+  font-family: var(--font-principal);
+  font-size: 4.5em;
+  line-height: 0.9;
+  color: var(--hazamora-dark-green);
+  margin: 0;
+}
+
+.blog-left .blog-bold {
+  font-weight: bold;
+}
+
+.blog-left .blog-light {
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  font-size: 0.6em;
+  display: block;
+  color: var(--hazamora-orange-brown);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.icono.sparkles-img {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.blog-left .sparkles-img.top-left {
+  top: -20px;
+  left: 0;
+  transform: rotate(-15deg);
+}
+
+.blog-left .sparkles-img.bottom-left {
+  bottom: -20px;
+  right: 0;
+  transform: rotate(20deg);
+}
+
+.blog-section .sparkles-img.bottom-right {
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card .card-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 25px auto 15px auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.blog-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card .card-content {
+  padding: 25px;
+  padding-top: 0;
+  text-align: left;
+}
+
+.blog-card .card-content h2 {
+  font-family: var(--font-principal);
+  font-size: 1.8em;
+  color: var(--hazamora-medium-green);
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.blog-card .card-content p {
+  font-family: var(--font-secondary);
+  font-size: 1em;
+  color: var(--text-color-dark);
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .blog-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* <-- CAMBIO CLAVE: Alinea verticalmente los elementos secundarios al centro */
+    gap: 80px;
+  }
+
+  .blog-left {
+    text-align: left;
+    flex-shrink: 0;
+    max-width: 350px;
+    margin-bottom: 0;
+    margin-top: 0; /* <-- Quitamos este margen, ya que align-items: center lo manejará */
+  }
+
+  .blog-left h1 {
+    font-size: 5.5em;
+  }
+
+  .blog-left .sparkles-img.top-left {
+    top: -50px;
+    left: -30px;
+    width: 70px;
+  }
+
+  .blog-left .sparkles-img.bottom-left {
+    bottom: -50px;
+    right: -20px;
+    width: 60px;
+  }
+
+  .blog-card {
+    margin-bottom: 0;
+    margin-top: 20px; /* Puedes ajustar este margen si la tarjeta necesita un pequeño desplazamiento vertical */
+  }
+
+  .blog-section .sparkles-img.bottom-right {
+    bottom: 10px;
+    right: 50px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-left {
+    max-width: 450px;
+  }
+  .blog-left h1 {
+    font-size: 6em;
+  }
+  .blog-card {
+    max-width: 650px;
+  }
+  .blog-section {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-section {
+    padding: 40px 15px;
+  }
+  .blog-left h1 {
+    font-size: 3.5em;
+  }
+  .blog-left .blog-light {
+    font-size: 0.5em;
+  }
+  .blog-left .sparkles-img.top-left,
+  .blog-left .sparkles-img.bottom-left {
+    width: 40px;
+  }
+  .blog-card {
+    max-width: 100%;
+  }
+  .blog-card .card-image {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .blog-section .sparkles-img.bottom-right {
+    width: 50px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
