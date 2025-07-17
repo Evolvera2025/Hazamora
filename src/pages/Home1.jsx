@@ -1,6 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { Mision } from '../components/Mision';
+import { Gallery } from '../components/Galeria';
 
 
 export const Home1 = () => {
@@ -11,6 +12,7 @@ export const Home1 = () => {
     <main>
       <Hero />
       <Mision />
+      <Gallery />
 
     </main>
     {/*Footer*/}
