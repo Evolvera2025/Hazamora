@@ -27,7 +27,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="hazamora-form-container">
+    <div className="hazamora-form-container" id="contacto">
       <h2 className="form-title">¡Contáctanos!</h2>
       <p className="form-subtitle">Estamos listas para trabajar contigo.</p>
 

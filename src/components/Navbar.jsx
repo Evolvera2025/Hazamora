@@ -21,10 +21,11 @@ export function Navbar() {
       </button>
       <div className={`links ${isOpen ? 'open' : ''}`}>
         <a href="#inicio" className={currentHash === '#inicio' || currentHash === '' ? 'active' : ''}>Inicio</a>
-        <a href="#nosotras" className={currentHash === '#nosotras' ? 'active' : ''}>Nosotras</a>
         <a href="#mision" className={currentHash === '#mision' ? 'active' : ''}>Misión</a>
+        <a href="#nosotras" className={currentHash === '#nosotras' ? 'active' : ''}>Nosotras</a>
         <a href="#servicios" className={currentHash === '#servicios' ? 'active' : ''}>Servicios</a>
         <a href="#blog" className={currentHash === '#blog' ? 'active' : ''}>Blog</a>
+        <a href="#contacto" className={currentHash === '#contacto' ? 'active' : ''}>Contacto</a>
       </div>
     </nav>
   );
