@@ -17,7 +17,7 @@ const Blog = () => {
 
       <div className="blog-card">
         <div className="card-image">
-          <img src="/img/buo.jpg" alt="marketing" />
+          <img src="../../public/img/IMG_0134.HEIC.jpg" alt="marketing" />
         </div>
         <div className="card-content">
           <h2>Marketing en la actualidad</h2>

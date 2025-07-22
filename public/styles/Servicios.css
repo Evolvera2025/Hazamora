@@ -109,14 +109,14 @@
   align-items: flex-start;
   background-color: var(--hazamora-light-gray);
   padding: 25px;
-  border-radius: 20px; /* Bordes más redondeados para efecto flotante */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra más suave y extendida */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .servicios:hover {
-  transform: translateY(-7px); /* Se eleva un poco más al pasar el ratón */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al flotar */
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .servicios .linea {
@@ -153,17 +153,16 @@
   .servicios-section {
     flex-direction: row;
     align-items: stretch;
-    gap: 0;
   }
 
   .servicios-izquierda {
-    flex: 1;
+    flex: 0.6; /* Reducimos la proporción del lado izquierdo */
     max-width: none;
     margin-bottom: 0;
-    align-items: flex-start;
     text-align: left;
-    padding: 80px 40px;
     min-height: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .servicios-izquierda .icono-c {
@@ -180,7 +179,7 @@
   }
 
   .servicios-derecha {
-    flex: 1;
+    flex: 1.4; /* Aumentamos la proporción del lado derecho */
     grid-template-columns: 1fr;
     max-width: none;
     padding: 80px 40px;
@@ -193,7 +192,8 @@
 
 @media (min-width: 1024px) {
   .servicios-izquierda {
-    padding: 100px 50px;
+    padding: 100px 30px;
+    flex: 0.5; /* Lo hacemos aún más pequeño en pantallas grandes */
   }
 
   .servicios-izquierda h2 {
@@ -201,7 +201,8 @@
   }
 
   .servicios-derecha {
-    padding: 100px 50px;
+    padding: 100px 70px;
+    flex: 1.5; /* Le damos más espacio al lado derecho */
   }
 }
 

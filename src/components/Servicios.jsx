@@ -13,9 +13,9 @@ const ServiciosSection = () => {
         <p>tu marca con</p>
         <button
           className="boton-contacto"
-          onClick={() => window.location.href = 'https://wa.me/5210000000000'}
+          onClick={() => window.location.href = 'https://wa.me/527713959101?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.'}
         >
-          ¡CONTÁCTANOS!
+          Contactar por WhatsApp
         </button>
         <div className="chevron-down"></div> {/* Nuevo elemento para la flecha */}
       </div>
