@@ -1,7 +1,7 @@
 /* Contenedor principal de la galería */
 .gallery-main {
   padding: 1rem;
-  background: var(--border);
+  background: #fff5e6;
   min-height: 160vh;
   display: flex;
   flex-direction: column;
@@ -359,15 +359,4 @@
 .indicator:focus {
   outline: 2px solid var(--hazamora4);
   outline-offset: 2px;
-}
-
-/* Modo oscuro (opcional) */
-@media (prefers-color-scheme: dark) {
-  .gallery-main {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  }
-  
-  .image-overlay {
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-  }
 }

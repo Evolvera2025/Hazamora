@@ -1,4 +1,3 @@
-
 /* HERO SECTION STYLES */
 .hero-section {
   position: relative;
@@ -102,6 +101,67 @@
   opacity: 0;
   transform: translateY(30px);
   transition: var(--transition);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(235, 148, 16, 0.3),
+    rgba(37, 99, 235, 0.3),
+    rgba(139, 92, 246, 0.3),
+    transparent
+  );
+  animation: borderShimmer 3s ease-in-out infinite;
+}
+
+@keyframes borderShimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.hero-content::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(235, 148, 16, 0.03) 0%,
+    transparent 50%
+  );
+  animation: glowPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes glowPulse {
+  0%, 100% { 
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 .hero-content.fade-in {
@@ -111,12 +171,11 @@
 
 .hero-text-container {
   margin-bottom: 2rem;
-  line-height: 52px;
+  line-height: 1.2; /* Cambiado de 52px a 1.2 para mejor responsividad */
 }
 
 .text-line {
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .text-reveal {
@@ -127,6 +186,10 @@
   color: var(--text-primary);
   transform: translateY(0%);
   animation: textReveal 1s ease-out forwards;
+  word-wrap: break-word;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  letter-spacing: -0.02em; /* Espaciado más compacto */
 }
 
 .line-1 .text-reveal {
@@ -138,8 +201,8 @@
 }
 
 .line-3 .text-reveal {
-  width: 600px;
   animation-delay: 0.9s;
+  /* Removido width fijo que causaba problemas */
 }
 
 @keyframes textReveal {
@@ -160,6 +223,26 @@
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
   animation: gradientMove 3s ease-in-out infinite;
+  position: relative;
+}
+
+.gradient-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 148, 16, 0.3),
+    rgba(37, 99, 235, 0.3),
+    rgba(139, 92, 246, 0.3)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(8px);
+  z-index: -1;
+  animation: gradientMove 3s ease-in-out infinite reverse;
 }
 
 @keyframes gradientMove {
@@ -180,12 +263,16 @@
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
   line-height: 1.6;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .description-final {
   font-size: 1.2rem;
   color: var(--text-primary);
   margin-top: 1rem;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .highlight {
@@ -238,9 +325,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(235, 148, 16, 0.3);
+  box-shadow: 
+    0 4px 15px rgba(235, 148, 16, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button::before {
@@ -250,7 +341,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s;
 }
 
@@ -259,12 +350,16 @@
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(235, 148, 16, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 25px rgba(235, 148, 16, 0.4),
+    0 4px 15px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .cta-button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+  transition: transform 0.1s;
 }
 
 .cta-button svg {
@@ -301,6 +396,7 @@
 .img-phone {
   width: 300px;
   height: auto;
+  max-width: 100%; /* Añadido para responsividad */
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
   animation: phoneFloat 3s ease-in-out infinite;
 }
@@ -377,7 +473,7 @@
 
 /* POSICIONAMIENTO DE ICONOS */
 .icon-bulb {
-  top: 10%;
+  top: -20%;
   left: 20%;
   animation: iconFloat 4s ease-in-out infinite;
 }
@@ -389,14 +485,14 @@
 }
 
 .icon-message {
-  bottom: 30%;
-  left: 5%;
+  bottom: 5%;
+  left: 15%;
   animation: iconFloat 4s ease-in-out infinite -2s;
 }
 
 .icon-exclamation {
   bottom: 15%;
-  right: 20%;
+  right: 2%;
   animation: iconFloat 4s ease-in-out infinite -3s;
 }
 
@@ -447,25 +543,46 @@
   }
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN - CORRECCIONES PRINCIPALES */
 @media (max-width: 768px) {
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
     padding: 0 1rem;
+    max-width: 100%;
+  }
+  
+  .hero-content {
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  .hero-text-container {
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
   
   .text-reveal {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    word-break: break-word;
   }
   
-  .description-text {
+  .description-text,
+  .description-final {
     font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .description-container {
+    margin-bottom: 2rem;
   }
   
   .img-phone {
-    width: 250px;
+    width: 280px;
+    max-width: 90vw;
   }
   
   .icon-container {
@@ -477,23 +594,125 @@
     width: 25px;
     height: 25px;
   }
+  
+  /* Ajustar posición de iconos flotantes en tablet */
+  .floating-icons {
+    display: none; /* Ocultar en tablet para mejor rendimiento */
+  }
 }
 
 @media (max-width: 480px) {
-  .text-reveal {
-    font-size: 1.8rem;
+  .hero-section {
+    min-height: 90vh;
+    padding: 2rem 0;
   }
   
-  .description-text {
+  .hero-container {
+    padding: 0 0.75rem;
+    gap: 1.5rem;
+  }
+  
+  .hero-content {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    max-width: 95%;
+  }
+  
+  .hero-text-container {
+    margin-bottom: 1rem;
+  }
+  
+  .text-reveal {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .description-text,
+  .description-final {
     font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .description-container {
+    margin-bottom: 1.5rem;
   }
   
   .cta-button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.875rem 1.75rem;
     font-size: 1rem;
+    border-radius: 40px;
+  }
+  
+  .img-phone {
+    width: 240px;
+    max-width: 85vw;
+  }
+  
+  /* Simplificar formas flotantes en móvil */
+  .floating-shapes .shape {
+    display: none;
+  }
+  
+  .particles {
+    display: none; /* Ocultar partículas en móvil para mejor rendimiento */
+  }
+}
+
+/* DISPOSITIVOS MUY PEQUEÑOS */
+@media (max-width: 375px) {
+  .hero-container {
+    padding: 0 0.5rem;
+  }
+  
+  .hero-content {
+    padding: 1.5rem 1.25rem;
+    border-radius: 18px;
+    max-width: 98%;
+  }
+  
+  .text-reveal {
+    font-size: 1.75rem;
+  }
+  
+  .description-text,
+  .description-final {
+    font-size: 0.95rem;
+  }
+  
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
   }
   
   .img-phone {
     width: 200px;
+    max-width: 80vw;
+  }
+}
+
+/* DISPOSITIVOS EXTRA PEQUEÑOS (iPhone SE, etc.) */
+@media (max-width: 320px) {
+  .hero-content {
+    padding: 1.25rem 1rem;
+    border-radius: 16px;
+  }
+  
+  .text-reveal {
+    font-size: 1.5rem;
+  }
+  
+  .description-text,
+  .description-final {
+    font-size: 0.9rem;
+  }
+  
+  .img-phone {
+    width: 180px;
+    max-width: 75vw;
+  }
+  
+  .cta-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
