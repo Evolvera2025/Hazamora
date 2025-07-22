@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import '../../public/styles/galeria.css'; // Importar los estilos CSS
+import HazamoraLogoWhite from '../../public/img/LOGO HAZAMORA BLANCO-03.png';
 
 export const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   const imagenes = [
-    { src: 'foto1.JPG', ig: 'https://instagram.com/integrante1', title: 'Araña', photographer: 'María García' },
-    { src: 'foto2.jpg', ig: 'https://instagram.com/integrante2', title: 'Búho', photographer: 'Carlos López' },
-    { src: 'foto3.jpg', ig: 'https://instagram.com/integrante3', title: 'Elefante', photographer: 'Ana Martínez' },
-    { src: 'foto4.jpg', ig: 'https://instagram.com/integrante4', title: 'Gato', photographer: 'Luis Rodríguez' },
-    { src: 'foto5.jpg', ig: 'https://instagram.com/integrante5', title: 'Tigre', photographer: 'Sofia Hernández' },
-    { src: 'foto6.jpg', ig: 'https://instagram.com/integrante6', title: 'Café', photographer: 'Diego Ruiz' },
-    { src: 'concierto.jpg', ig: 'https://instagram.com/integrante7', title: 'Concierto', photographer: 'Elena Morales' },
-    { src: 'aurora.jpg', ig: 'https://instagram.com/integrante8', title: 'Aurora', photographer: 'Miguel Castro' },
-    { src: 'paisaje.jpg', ig: 'https://instagram.com/integrante9', title: 'Paisaje', photographer: 'Laura Jiménez' },
-    { src: 'retrato.jpg', ig: 'https://instagram.com/integrante10', title: 'Retrato', photographer: 'Pablo Vega' },
-    { src: 'retrato.jpg', ig: 'https://instagram.com/integrante10', title: 'Retrato', photographer: 'Pablo Vega' },
-    { src: 'retrato.jpg', ig: 'https://instagram.com/integrante10', title: 'Retrato', photographer: 'Pablo Vega' },
+    { src: 'foto1.JPG', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Grecia Castellanos' },
+    { src: 'foto2.jpg', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Hazamora' },
+    { src: 'foto3.jpg', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Grecia Castellanos' },
+    { src: 'foto4.jpg', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Hazamora' },
+    { src: 'foto5.jpg', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Hazamora' },
+    { src: 'foto6.jpg', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Daina Gómez' },
+    { src: 'foto7.png', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Hazamora' },
+    { src: 'foto8.jpg', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Grecia Castellanos' },
+    { src: 'foto9.jpg', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Daina Gómez' },
+    { src: 'foto10.png', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Hazamora' },
+    { src: 'foto11.png', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Hazamora' },
+    { src: 'LOGO HAZAMORA VERDE-03.png', ig: 'https://www.instagram.com/hazamora.agencia?igsh=Nzg4bTkyNjl0Zndt', photographer: 'Hazamora' },
   ];
 
   useEffect(() => {
